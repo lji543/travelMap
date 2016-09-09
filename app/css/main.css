@@ -1,0 +1,175 @@
+html {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  html body {
+    margin: 0; }
+
+.landing {
+  background: url("../images/background.png") no-repeat center center fixed;
+  padding: 24px 12px; }
+
+.navbar-logo {
+  background: url("../images/logo.png") no-repeat center center;
+  background-size: 100% 100%; }
+
+.navbar-action {
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 200;
+  padding: 12px;
+  text-transform: capitalize; }
+
+.navbar-joinus {
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  color: #F4511E;
+  font-size: 12px;
+  font-weight: 200;
+  padding: 12px;
+  text-align: center;
+  text-transform: capitalize; }
+
+.taglines {
+  color: #FFFFFF;
+  font-weight: 200;
+  text-align: center; }
+  .taglines-mhead {
+    font-size: 36px;
+    padding: 36px 0; }
+  .taglines-subhead {
+    font-size: 22px;
+    padding-bottom: 24px; }
+
+.search {
+  margin: 0 12px; }
+  .search input {
+    border-color: transparent;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 8px 0;
+    padding: 12px;
+    text-align: center; }
+  .search-selection-dropdown {
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    color: #D8D8D8;
+    cursor: pointer;
+    margin: 8px 0;
+    padding: 8px 12px; }
+    .search-selection-dropdown-inner {
+      align-items: center;
+      font-size: 12px;
+      justify-content: center; }
+    .search-selection-dropdown ul {
+      list-style: none; }
+    .search-selection-dropdown a:hover, .search-selection-dropdown a:visited, .search-selection-dropdown a:link, .search-selection-dropdown a:active {
+      text-decoration: none;
+      color: #D8D8D8; }
+    .search-selection-dropdown-items {
+      list-style: none;
+      display: none; }
+  .search-gobutton {
+    background-color: #90C45B;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 8px 0;
+    padding: 12px;
+    text-align: center; }
+
+.listings-tabs {
+  margin: 24px 0; }
+  .listings-tabs-item {
+    color: #4D4F56;
+    font-size: 14px;
+    padding: 12px 8px;
+    margin: 2px; }
+
+.listings-show {
+  margin: 0 12px; }
+  .listings-show-simage {
+    background-size: 100% 100%;
+    justify-content: center;
+    margin: 12px 0; }
+  .listings-show-genre {
+    color: #D8D8D8;
+    font-size: 14px; }
+  .listings-show-headliner {
+    color: #F4511E;
+    font-size: 18px;
+    padding: 12px 0; }
+  .listings-show-info {
+    border-top: 1px solid #D8D8D8; }
+    .listings-show-info-location {
+      border-right: 1px solid #D8D8D8;
+      color: #4D4F56;
+      font-size: 14px;
+      padding: 12px 12px 0 0;
+      text-align: right; }
+      .listings-show-info-location-tlabel {
+        color: #D8D8D8;
+        font-size: 12px;
+        padding-bottom: 8px; }
+    .listings-show-info-pricing {
+      color: #4D4F56;
+      font-size: 14px;
+      padding: 12px 0 0 12px;
+      text-align: left; }
+      .listings-show-info-pricing-tlabel {
+        color: #D8D8D8;
+        font-size: 12px;
+        padding-bottom: 8px; }
+
+.listings-discover {
+  border: 1px solid #D8D8D8;
+  color: #90C45B;
+  font-size: 14px;
+  margin: 48px 36px;
+  padding: 12px 60px;
+  text-align: center; }
+
+.listings-bottom {
+  border-bottom: 1px solid #D8D8D8;
+  margin: 48px 0 36px 0; }
+
+.footer-social {
+  align-items: center;
+  margin: 4px 8px; }
+  .footer-social-icons {
+    align-items: center;
+    height: 100%;
+    margin: 8px; }
+
+.footer-misc {
+  color: #D8D8D8;
+  font-size: 14px;
+  margin: 8px;
+  padding: 8px; }
+
+.footer a:hover, .footer a:visited, .footer a:link, .footer a:active {
+  color: #D8D8D8; }
+
+#tabsUnder {
+  border-bottom: 1px solid #90C45B; }
+
+@media (max-width: 340px) {
+  .listings-show-simage {
+    height: 240px;
+    width: 280px; }
+  .footer-social-icons {
+    height: 30px;
+    width: 30px; } }
+
+@media (max-width: 960px) {
+  .listings-show-simage {
+    height: 240px;
+    width: 300px; }
+  #featured {
+    height: 320px;
+    width: 680px; } }

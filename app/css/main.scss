@@ -1,0 +1,370 @@
+// NOTES:
+// -keep items in increments of 8/12
+// -change class names to match sketch items/categories?
+
+// Style Scheme:
+$darkGray:#4D4F56;
+$lightGray:#D8D8D8;
+$green:#90C45B;
+$red:#F4511E;
+$white:#FFFFFF;
+
+$fontSmall: 12px;
+$fontMed:14px;
+$fontLarge:16px;
+// Used?
+$fontXlarge:18px;
+$fontXXlarge:20px;
+$fontMhead:36px;
+$fontSubhead:22px;
+
+// TODO: REMOVE?
+$fontLight: 200;
+
+
+
+html { 
+	font-family: 'Lato', sans-serif;
+	// TODO: REMOVE?
+	font-weight:300;
+
+body {
+	margin:0;
+	
+}
+
+	// TODO: Use background-size 100% 100%
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	// -webkit-input-placeholder: {
+	// 	color: $lightGray;
+	// }
+	// -moz-placeholder: {
+	// 	color: $lightGray;
+	// }
+	// -moz-placeholder {
+	// 	color: $lightGray;
+	// }
+	// -ms-input-placeholder {  
+	// 	color: $lightGray;
+	// }
+	// -o-input-placeholder {
+	// 	color: $lightGray;
+	// }
+}
+
+// this class encompasses entire top navbar, taglines, and inputs/form
+.landing {
+  background: url('../images/background.png') no-repeat center center fixed; 
+  padding: 24px 12px;
+}
+
+// TODO: Alphabetical order
+.navbar {
+
+	&-logo {
+		background: url('../images/logo.png') no-repeat center center;
+		background-size: 100% 100%;
+
+		// TODO: Best to make separate div? Ok to have fixed sizes?
+		// height: 56px;
+		// width: 48px;
+	}
+
+	&-topspan {
+		// flex-grow: 2;
+	}
+
+	&-action {
+		color: $white;
+		font-size: $fontSmall;
+		font-weight: $fontLight;
+		padding: 12px;
+		// padding:12px 24px;
+		text-transform: capitalize;
+	}
+
+	&-joinus {
+		background-color: $white;
+		border-radius: 4px;
+		color: $red;
+		font-size: $fontSmall;
+		font-weight: $fontLight;
+		padding:12px;
+		// padding:12px 24px;
+		text-align: center;
+		text-transform: capitalize;
+	}
+
+}
+
+.taglines {
+	color:$white;
+	// display:flex;
+	// flex-direction:column;
+	font-weight: $fontLight;
+	// padding: 0 16px;
+	text-align:center;
+
+	&-mhead {
+		font-size: $fontMhead;
+		padding: 36px 0;
+	}
+
+	&-subhead {
+		font-size: $fontSubhead;
+		padding-bottom:24px;
+	}
+}
+
+.search {
+	// align-items: center;
+	// display: flex;
+	// flex-direction: column;
+	margin: 0 12px;
+
+	& input {
+		// TODO: 3px taller than the button
+		border-color: transparent;
+		border-radius: 4px;
+		font-size: $fontSmall;
+		line-height: 1.5;
+		margin: 8px 0;
+		padding:12px;
+		text-align: center;
+		// width: 80%;
+
+		// Remove blue outline when selected?
+		// & active {
+
+		// }
+	}
+
+	&-selection {
+
+		&-dropdown {
+			background-color: $white;
+			border-radius: 4px;
+			color: $lightGray;
+			cursor: pointer;
+			// display: flex;
+			// flex-direction: row;
+			// justify-content: center;
+			margin: 8px 0;
+			padding: 8px 12px;
+			// text-align: center;
+			// width: 45%;
+
+			&-inner {
+				align-items: center;
+				// display:flex;
+				// flex-direction:row;
+				font-size: $fontSmall;
+				justify-content: center;
+				// text-align: center;
+			}
+
+			& ul {
+				list-style: none;
+			}
+			& a:hover, a:visited, a:link, a:active {
+				text-decoration: none;
+				color: $lightGray;
+			}
+
+			&-items {
+				list-style: none;
+				display: none;
+			}
+
+		}
+
+		// &-dropMid {
+		// 	width: 20%
+		// }
+	}
+
+	&-gobutton {
+		background-color: $green;
+		border-radius: 4px;
+		color: $white;
+		font-size: $fontMed;
+		line-height: 1.5;
+		margin: 8px 0;
+		padding: 12px;
+		text-align: center;
+		// width: 80%;
+	}
+}
+
+.listings {
+
+	&-tabs {
+		// align-items: center;
+		// display:flex;
+		// flex-direction:row;
+		margin: 24px 0;
+
+		&-item {
+			color: $darkGray;
+			font-size: $fontMed;
+			padding: 12px 8px;
+			margin: 2px;
+		}
+	}
+
+	&-show {
+		// display:flex;
+		// flex-direction:column;
+		margin: 0 12px;
+
+		&-simage {
+			// align-items: center;
+			// background: url('../images/kenny.png') no-repeat center center;
+			background-size: 100% 100%;
+			justify-content: center;
+			// height: 240px;
+			margin: 12px 0;
+			// width: 280px;
+		}
+
+		&-genre {
+			color: $lightGray;
+			font-size: $fontMed;
+		}
+
+		&-headliner {
+			color: $red;
+			font-size: $fontXlarge;
+			padding: 12px 0;
+		}
+
+		&-info {
+			border-top: 1px solid $lightGray;
+			// display:flex;
+			// flex-direction:row;
+			// justify-content: center;
+
+			&-location {
+				border-right: 1px solid $lightGray;
+				// TODO: move the color, size, etc that applies to the city and 
+				// price range to a class of it's own?
+				color: $darkGray;
+				// display:flex;
+				// flex-direction:column;
+				font-size: $fontMed;
+				padding: 12px 12px 0 0;
+				text-align: right;
+
+				&-tlabel {
+					color: $lightGray;
+					font-size: $fontSmall;
+					padding-bottom: 8px;
+				}
+			}
+
+			&-pricing {
+				color: $darkGray;
+				// display:flex;
+				// flex-direction:column;
+				font-size: $fontMed;
+				padding: 12px 0 0 12px;
+				text-align: left;
+
+				&-tlabel {
+					color: $lightGray;
+					font-size: $fontSmall;
+					padding-bottom: 8px;
+				}
+			}
+		}
+	}
+
+	&-discover {
+		border: 1px solid $lightGray;
+		color: $green;
+		font-size: $fontMed;
+		margin:48px 36px;
+		padding: 12px 60px;
+		text-align: center;
+	}
+
+	&-bottom {
+		border-bottom: 1px solid $lightGray;
+		margin: 48px 0 36px 0;
+	}
+
+}
+
+.footer {
+
+	&-social {
+		align-items: center;
+		margin: 4px 8px;
+
+		&-icons {
+			align-items: center;
+			height: 100%;
+			// justify-content: center;
+			margin: 8px;
+		}
+	}
+
+	&-misc {
+		color: $lightGray;
+		font-size: $fontMed;
+		margin: 8px;
+		padding: 8px;
+	}
+
+	& a:hover, a:visited, a:link, a:active {
+		color: $lightGray;
+	}
+}
+
+
+// Misc Classes:
+// .horizontal-divider {
+// 	border-bottom: 1px solid $lightGray;
+// }
+
+#tabsUnder {
+	border-bottom: 1px solid $green;
+}
+
+
+// Media queries
+@media (max-width:340px) {
+	.listings-show-simage {
+	// kenny featured is off on small screen
+		height: 240px;
+		width: 280px;
+	}
+
+	.footer-social-icons {
+		height: 30px;
+		width: 30px;
+	}
+}
+
+@media (max-width:960px) { // need multiple queries in here --->min-width
+	// thicker font for headings in tablet size
+
+
+	.listings-show-simage {
+		height: 240px;
+		width: 300px;
+	}
+	// would need to apply style to highlight first photo 
+	// --> not always going to be kenny
+	#featured {
+		height: 320px;
+		width: 680px;
+	}
+}
+
+
+
