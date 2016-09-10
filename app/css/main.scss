@@ -15,8 +15,10 @@ $fontLarge:16px;
 // Used?
 $fontXlarge:18px;
 $fontXXlarge:20px;
-$fontMhead:36px;
 $fontSubhead:22px;
+$fontMhead:40px;
+
+$fontXMhead:48px;
 
 // TODO: REMOVE?
 $fontLight: 200;
@@ -38,63 +40,41 @@ body {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-
-	// -webkit-input-placeholder: {
-	// 	color: $lightGray;
-	// }
-	// -moz-placeholder: {
-	// 	color: $lightGray;
-	// }
-	// -moz-placeholder {
-	// 	color: $lightGray;
-	// }
-	// -ms-input-placeholder {  
-	// 	color: $lightGray;
-	// }
-	// -o-input-placeholder {
-	// 	color: $lightGray;
-	// }
 }
 
 // this class encompasses entire top navbar, taglines, and inputs/form
 .landing {
-  background: url('../images/background.png') no-repeat center center fixed; 
-  padding: 24px 12px;
+  background: url('../images/background.png') no-repeat center center; 
+  padding: 0 12px;
 }
 
-// TODO: Alphabetical order
+// Listed in Order of Appearance
 .navbar {
+	padding-top: 12px;
 
 	&-logo {
 		background: url('../images/logo.png') no-repeat center center;
 		background-size: 100% 100%;
-
-		// TODO: Best to make separate div? Ok to have fixed sizes?
-		// height: 56px;
-		// width: 48px;
-	}
-
-	&-topspan {
-		// flex-grow: 2;
+		max-height: 60px;
+		max-width: 40px;
 	}
 
 	&-action {
 		color: $white;
-		font-size: $fontSmall;
+		font-size: $fontMed;
 		font-weight: $fontLight;
-		padding: 12px;
-		// padding:12px 24px;
+		padding: 12px 4px;
 		text-transform: capitalize;
 	}
 
 	&-joinus {
+		align-items: center;
 		background-color: $white;
 		border-radius: 4px;
 		color: $red;
-		font-size: $fontSmall;
+		font-size: $fontMed;
 		font-weight: $fontLight;
 		padding:12px;
-		// padding:12px 24px;
 		text-align: center;
 		text-transform: capitalize;
 	}
@@ -103,15 +83,13 @@ body {
 
 .taglines {
 	color:$white;
-	// display:flex;
-	// flex-direction:column;
 	font-weight: $fontLight;
-	// padding: 0 16px;
+	padding: 0 24px;
 	text-align:center;
 
 	&-mhead {
 		font-size: $fontMhead;
-		padding: 36px 0;
+		padding: 12px;
 	}
 
 	&-subhead {
@@ -121,10 +99,10 @@ body {
 }
 
 .search {
-	// align-items: center;
-	// display: flex;
-	// flex-direction: column;
+	justify-content:center;
 	margin: 0 12px;
+	text-align:center;	
+
 
 	& input {
 		// TODO: 3px taller than the button
@@ -135,36 +113,24 @@ body {
 		margin: 8px 0;
 		padding:12px;
 		text-align: center;
-		// width: 80%;
-
-		// Remove blue outline when selected?
-		// & active {
-
-		// }
 	}
 
 	&-selection {
+		max-height: 60px;
 
 		&-dropdown {
 			background-color: $white;
 			border-radius: 4px;
 			color: $lightGray;
 			cursor: pointer;
-			// display: flex;
-			// flex-direction: row;
-			// justify-content: center;
+			line-height: 1.5;
 			margin: 8px 0;
 			padding: 8px 12px;
-			// text-align: center;
-			// width: 45%;
 
 			&-inner {
 				align-items: center;
-				// display:flex;
-				// flex-direction:row;
 				font-size: $fontSmall;
 				justify-content: center;
-				// text-align: center;
 			}
 
 			& ul {
@@ -179,12 +145,7 @@ body {
 				list-style: none;
 				display: none;
 			}
-
 		}
-
-		// &-dropMid {
-		// 	width: 20%
-		// }
 	}
 
 	&-gobutton {
@@ -192,20 +153,15 @@ body {
 		border-radius: 4px;
 		color: $white;
 		font-size: $fontMed;
-		line-height: 1.5;
 		margin: 8px 0;
-		padding: 12px;
+		padding: 12px 0;
 		text-align: center;
-		// width: 80%;
 	}
 }
 
 .listings {
 
 	&-tabs {
-		// align-items: center;
-		// display:flex;
-		// flex-direction:row;
 		margin: 24px 0;
 
 		&-item {
@@ -217,18 +173,12 @@ body {
 	}
 
 	&-show {
-		// display:flex;
-		// flex-direction:column;
 		margin: 0 12px;
 
 		&-simage {
-			// align-items: center;
-			// background: url('../images/kenny.png') no-repeat center center;
 			background-size: 100% 100%;
 			justify-content: center;
-			// height: 240px;
 			margin: 12px 0;
-			// width: 280px;
 		}
 
 		&-genre {
@@ -244,17 +194,10 @@ body {
 
 		&-info {
 			border-top: 1px solid $lightGray;
-			// display:flex;
-			// flex-direction:row;
-			// justify-content: center;
 
 			&-location {
 				border-right: 1px solid $lightGray;
-				// TODO: move the color, size, etc that applies to the city and 
-				// price range to a class of it's own?
 				color: $darkGray;
-				// display:flex;
-				// flex-direction:column;
 				font-size: $fontMed;
 				padding: 12px 12px 0 0;
 				text-align: right;
@@ -268,8 +211,6 @@ body {
 
 			&-pricing {
 				color: $darkGray;
-				// display:flex;
-				// flex-direction:column;
 				font-size: $fontMed;
 				padding: 12px 0 0 12px;
 				text-align: left;
@@ -288,18 +229,14 @@ body {
 		color: $green;
 		font-size: $fontMed;
 		margin:48px 36px;
-		padding: 12px 60px;
+		padding: 12px;
 		text-align: center;
 	}
-
-	&-bottom {
-		border-bottom: 1px solid $lightGray;
-		margin: 48px 0 36px 0;
-	}
-
 }
 
 .footer {
+	border-top: 1px solid $lightGray;
+	margin-top:48px;
 
 	&-social {
 		align-items: center;
@@ -308,7 +245,6 @@ body {
 		&-icons {
 			align-items: center;
 			height: 100%;
-			// justify-content: center;
 			margin: 8px;
 		}
 	}
@@ -325,46 +261,73 @@ body {
 	}
 }
 
-
-// Misc Classes:
-// .horizontal-divider {
-// 	border-bottom: 1px solid $lightGray;
-// }
-
 #tabsUnder {
 	border-bottom: 1px solid $green;
 }
 
 
+
 // Media queries
+
+@media (max-width:320px) {
+	.taglines-mhead {
+		font-size: 24px;
+		padding: 24px 0 12px 0;
+	}
+	.taglines-subhead {
+		font-size: $fontXlarge;
+	}
+}
+
 @media (max-width:340px) {
 	.listings-show-simage {
 	// kenny featured is off on small screen
 		height: 240px;
 		width: 280px;
 	}
-
 	.footer-social-icons {
 		height: 30px;
 		width: 30px;
 	}
+	#navPadding {
+		display: none;
+	}
 }
 
-@media (max-width:960px) { // need multiple queries in here --->min-width
+@media (min-width:341px) and (max-width:960px) {
 	// thicker font for headings in tablet size
-
-
+	// check heights of all these! should fit correctly on all screens
 	.listings-show-simage {
 		height: 240px;
 		width: 300px;
 	}
-	// would need to apply style to highlight first photo 
-	// --> not always going to be kenny
 	#featured {
 		height: 320px;
 		width: 680px;
 	}
 }
 
+@media (min-width:961px) and (max-width:1280px) {
+	.footer-social-icons {
+		margin:2px;
+	}
+	.listings {
+		margin: 24px 48px;
+	}
+	.listings-show-simage {
+		height: 280px;
+		width: 365px;
+	}
+	.taglines-mhead {
+		font-size: $fontXMhead;
+	}
+	#featured {
+		height: 320px;
+		width: 680px;
+	}
+}
 
+@media (min-width:1281px) {
+
+}
 

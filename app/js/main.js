@@ -4,19 +4,9 @@ angular
     .module('caddisApp.main', ['ngMaterial'])
     .controller('mainCtrl', mainCtrl);
 
-function mainCtrl($mdDialog,$sce,$scope) {
+function mainCtrl($scope,$timeout) {
 
     var s = $scope;
-
-    // Toggles for open/close of search dropwdowns
-    s.showBud = false;
-    s.showLoc = false;
-
-    // s.featured;
-
-    s.openSearchMenu = openSearchMenu;
-
-    // Array of shows to iterate through
 
     // TODO: filter for this? tablet size, 
     // would need to remove the first event in the array
@@ -25,13 +15,13 @@ function mainCtrl($mdDialog,$sce,$scope) {
     s.events = [
         {
             _id:'kenny',
-            artist: $sce.trustAsHtml('Kenny Chesney w&sol; Grace Potter'),
+            artist: 'Kenny Chesney w/ Grace Potter',
             city: 'Nashville',
             genre: 'Country',
             maxprice: 260,
             minprice: 30,
             photo:'../images/kenny.png',
-            state: 'Tennessee',
+            state: 'TN',
         },
         {
             _id:'gerald',
@@ -41,7 +31,7 @@ function mainCtrl($mdDialog,$sce,$scope) {
             maxprice: 15,
             minprice: 90,
             photo:'../images/gerald.png',
-            state: 'Georgia',
+            state: 'GA',
         },
         {
             _id:'rock',
@@ -51,25 +41,17 @@ function mainCtrl($mdDialog,$sce,$scope) {
             maxprice: 20,
             minprice: 40,
             photo:'../images/rock.png',
-            state: 'Alabama',
+            state: 'AL',
         }
     ];
+
+    // Set to show a featured event on certain screen sizes. Otherwise, empty.
+    s.featured = undefined;
 
     activate();
 
     /* PUBLIC FN's */
 
-    function openSearchMenu($mdOpenMenu, ev) {
-        // if (list==='loc') {
-        //     s.showLoc = true;
-        //     console.log(list)
-        // }
-
-        // if (list==='bud') {
-        //     s.showBud = true;
-        // }
-        $mdOpenMenu(ev);
-    }
 
     /* PRIVATE FN's */
 
@@ -77,16 +59,25 @@ function mainCtrl($mdDialog,$sce,$scope) {
         var width = window.innerWidth;
         // need to add a watcher for a resize, so we can add the featured back in
 
-        if (width > 320) {
+        if (width > 320 && width < 1280) {
             s.featured = s.events.splice(0,1);
         }
         // console.log(s.events)
         // console.log(s.featured)
     }
 
+    /*  LISTENERS  */
+    // Watches for window resize in order to add/remove a featured event
+    window.addEventListener('resize', function() {
+        $timeout(_filterEvents, 500);
+    });
+
+
     /* INITIALIZATION */
 
     function activate() {
+        // console.log(window.innerWidth)
+        // console.log(s.events)
 
         _filterEvents();
         // console.log(s.featured)
