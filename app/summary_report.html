@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+            <body style="font-family:Roboto,Helvetica,sans-serif;padding:0; margin:0 auto; font-weight:200;">
+      <div style="padding:8px;">
+          <table style="margin-bottom:12px;">
+
+              <div style="font-size:16px;font-weight:bold;text-decoration:underline;">Last {{period}} days:</div>
+              <thead>
+              <tr style="display:flex;flex-direction:row;padding:8px;">
+                <th style="font-size:16px;font-weight:bold;min-width:100px;padding:8px;text-align:left;width:20%;"></th>
+                <th style="font-size:16px;font-weight:bold;padding:8px;text-align:center;">Offers</th>
+                <th style="font-size:16px;font-weight:bold;padding:8px;text-align:center;">Pendings</th>
+                <th style="font-size:16px;font-weight:bold;padding:8px;text-align:center;">Rescisions</th>
+                <th style="font-size:16px;font-weight:bold;padding:8px;text-align:center;">Closings</th>
+              </tr>
+              </thead>
+
+              {% for sender in recent_senders %}
+              <tr style="border-bottom:solid black 1px;display:flex;flex-direction:row;font-size:12px;padding:8px;">
+                <td style="max-width:115px;min-width:100px;padding:8px;">{{sender.email}}</td>
+                <td style="align-self:center;padding:8px;text-align:center;">{{sender.offer}}</td>
+                <td style="align-self:center;padding:8px;text-align:center;">{{sender.mutual}}</td>
+                <td style="align-self:center;padding:8px;text-align:center;">{{sender.rescission}}</td>
+                <td style="align-self:center;padding:8px;text-align:center;">{{sender.closing}}</td>
+              </tr>            
+              {% endfor %}
+
+          </table>
+          <table style="margin:12px 0;">
+
+              <div style="font-size:16px;font-weight:bold;text-decoration:underline;">Total:</div>
+              <tr style="display:flex;flex-direction:row;padding:8px;">
+                <th style="font-size:16px;font-weight:bold;min-width:100px;padding:8px;text-align:left;"></th>
+                <th style="font-size:16px;font-weight:bold;padding:8px;text-align:center;">Offers</th>
+                <th style="font-size:16px;font-weight:bold;padding:8px;text-align:center;">Pendings</th>
+                <th style="font-size:16px;font-weight:bold;padding:8px;text-align:center;">Rescisions</th>
+                <th style="font-size:16px;font-weight:bold;padding:8px;text-align:center;">Closings</th>
+              </tr>
+
+              {% for sender in all_time_senders %}
+              <tr style="border-bottom:solid black 1px;display:flex;flex-direction:row;font-size:12px;padding:8px;">
+                <td style="max-width:115px;min-width:100px;padding:8px;">{{sender.email}}</td>
+                <td style="align-self:center;padding:8px;text-align:center;">{{sender.offer}}</td>
+                <td style="align-self:center;padding:8px;text-align:center;">{{sender.mutual}}</td>
+                <td style="align-self:center;padding:8px;text-align:center;">{{sender.rescission}}</td>
+                <td style="align-self:center;padding:8px;text-align:center;">{{sender.closing}}</td>
+              </tr>           
+              {% endfor %}
+
+          </table>
+      </div>
+    </body>
+</html>

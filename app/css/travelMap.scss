@@ -1,0 +1,20 @@
+.mapcontainer {
+	// color:pink;
+	// height: 500px;
+	// width: 500px;
+}
+
+.state {
+	color:pink;
+    stroke-width: 1;
+    stroke: #fff;
+
+    -webkit-transition: stroke 0.5s, stroke-width 0.5s;
+    -o-transition: stroke 0.5s, stroke-width 0.5s;
+    transition: stroke 0.5s, stroke-width 0.5s;
+}
+.state:hover , .state.active {
+    cursor: pointer;
+    stroke-width: 4;
+    stroke: #000;
+}

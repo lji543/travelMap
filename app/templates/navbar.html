@@ -1,0 +1,83 @@
+<div layout="row" class="navbar" ng-controller="navbarCtrl as nVm">
+  <!-- <div>logo</div> -->
+  <div class="navbar-links">
+    <a class="navbar-links-tag" 
+    style="color:#907472;text-decoration:none;"
+    href="/components/homePage/homePage">
+    <span style="align-self:center;">< /></span> Laura Illig</a>
+  </div>
+
+  <span flex></span>
+
+  <div hide-xs class="navbar-links">
+    <a class="navbar-links-tag" 
+    style="color:#907472;text-decoration:none;"
+    href="lauraillig.com">Home</a>
+  </div>
+
+  <span hide-xs class="navbar-separator">&#149;</span>
+
+  <div hide-xs class="navbar-links">
+    <a class="navbar-links-tag" 
+    style="color:#907472;text-decoration:none;" 
+    target="app_resume"
+    href="/staticItems/resume.pdf">Resume</a>
+  </div>
+
+  <span hide-xs class="navbar-separator">&#149;</span>
+
+  <div hide-xs class="navbar-links">
+    <a class="navbar-links-tag" 
+    style="color:#907472;text-decoration:none;" 
+    target="app_linkedin"
+    href="https://www.linkedin.com/in/lauraillig">LinkedIn</a>
+  </div>
+
+  <span class="navbar-separator">&#149;</span>
+
+  <div class="navbar-links">
+    <a class="navbar-links-tag" 
+    style="color:#907472;text-decoration:none;" 
+    href="/travelmap">Map</a>
+  </div>
+
+<!--   <span class="navbar-separator">&#149;</span>
+  
+  <div class="navbar-links">
+    <a class="navbar-links-tag" 
+    style="color:#907472;text-decoration:none;"
+    href="/components/contact/contact">Contact</a>
+  </div> -->
+
+  <span hide-gt-xs>
+    <div id="navbar-dropdown" class="pgo-navbar-link"
+      ng-click="nVm.showUserDropdown()">
+
+        <md-button id="navbar-dropdown-hamburger"
+        aria-label="user menu"
+        class="md-icon-button">
+              <i class="material-icons">menu</i>
+        </md-button>
+
+        <div id="dropdown-menu" ng-show="nVm.isUserDropdownShown"
+          layout="column">
+            <div id="dropdown-menu-notch"></div>
+
+            <a class="dropdown-link" target="app_resume"
+            style="color:#907472;text-decoration:none;"
+            href="/staticItems/resume.pdf">Resume</a>
+            <a class="dropdown-link" target="app_linkedin"
+            style="color:#907472;text-decoration:none;"
+            href="https://www.linkedin.com/in/lauraillig">LinkedIn</a>
+            <div class="dropdown-link separator"></div>
+            <a class="dropdown-link" 
+            style="color:#907472;text-decoration:none;"
+            href="lauraillig.com">Home</a>
+
+        </div>
+
+    </div>
+  </span>
+
+</div>
+
